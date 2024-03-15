@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Mac OS",
+        "icon": "./app/macOS.png"
+    },
+    {
+        "name": "Motivation",
+        "icon": "./app/music.png"
+    },
+    {
+        "name": "Notion",
+        "icon": "./app/notion.png"
+    },
+    {
+        "name": "Trello",
+        "icon": "./app/trello.png"
+    },
+    {
+        "name": "Slack",
+        "icon": "./app/slack.png"
+    },
+    {
+        "name": "Chat GPT",
+        "icon": "./app/chatGPT.png"
+    },
+    {
+        "name": "Arc",
+        "icon": "./app/arc.png"
+    },
+    {
+        "name": "Chrome",
+        "icon": "./app/chrome.png"
+    },
+    {
+        "name": "VSCode",
+        "icon": "./app/vsCode.png"
+    },
+    {
+        "name": "Terminal",
+        "icon": "./app/terminal.png"
+    },
+    {
+        "name": "Figma",
+        "icon": "./app/figma.png"
+    },
+    {
+        "name": "Acrobat Pro",
+        "icon": "./app/acrobatPro.png"
+    },
+    {
+        "name": "Photoshop",
+        "icon": "./app/photoshop.png"
+    },
+    {
+        "name": "Indesign",
+        "icon": "./app/indesign.png"
+    },
+    {
+        "name": "Illustrator",
+        "icon": "./app/illustrator.png"
+    },
+    {
+        "name": "Excel",
+        "icon": "./app/excel.png"
+    }
+]
