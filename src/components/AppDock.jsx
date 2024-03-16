@@ -1,34 +1,37 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+const size = 60;
+const sizeHover = 90;
+
 const AppList = styled.li`
-    width: 60px;
-    height: 60px;
+    width: ${size}px;
+    height: ${size}px;
     position: relative;
     display: flex;
     justify-content: center;
     transition: all 200ms ease-out;
 
     &:hover {
-        width: 90px;
-        height: 90px;
-        margin-top: -30px;
+        width: ${sizeHover}px;
+        height: ${sizeHover}px;
+        margin-top: -${(sizeHover - size)}px;
     }
 
     // App AVANT et APRÈS app survolée
     &:has(+ .app:hover),
     &:hover + .app {
-        width: 80px;
-        height: 80px;
-        margin-top: -20px;
+        width: ${size + ((sizeHover - size) / 3) * 2}px;
+        height: ${size + ((sizeHover - size) / 3) * 2}px;
+        margin-top: -${(sizeHover - size)/3*2}px;
     }
 
     // app AVANT/AVANT et APRÈS/APRÈS app survolée
     &:has(+ .app + .app:hover),
     &:hover + .app + .app {
-        width: 70px;
-        height: 70px;
-        margin-top: -10px;
+        width: ${size + (sizeHover - size) / 3}px;
+        height: ${size + (sizeHover - size) / 3}px;
+        margin-top: -${(sizeHover - size)/3}px;
     }
 `;
 
