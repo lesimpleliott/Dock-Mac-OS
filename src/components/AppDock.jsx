@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const size = 60;
+const size = 55;
 const sizeHover = 90;
 
 const AppList = styled.li`
@@ -10,28 +10,30 @@ const AppList = styled.li`
     position: relative;
     display: flex;
     justify-content: center;
-    transition: all 200ms ease-out;
+    transition: all 150ms ease-out;
 
-    &:hover {
-        width: ${sizeHover}px;
-        height: ${sizeHover}px;
-        margin-top: -${(sizeHover - size)}px;
-    }
+    @media screen and (min-width: 1024px) {
+        &:hover {
+            width: ${sizeHover}px;
+            height: ${sizeHover}px;
+            margin-top: -${sizeHover - size}px;
+        }
 
-    // App AVANT et APRÈS app survolée
-    &:has(+ .app:hover),
-    &:hover + .app {
-        width: ${size + ((sizeHover - size) / 3) * 2}px;
-        height: ${size + ((sizeHover - size) / 3) * 2}px;
-        margin-top: -${(sizeHover - size)/3*2}px;
-    }
+        // App AVANT et APRÈS app survolée
+        &:has(+ .app:hover),
+        &:hover + .app {
+            width: ${size + ((sizeHover - size) / 3) * 2}px;
+            height: ${size + ((sizeHover - size) / 3) * 2}px;
+            margin-top: -${((sizeHover - size) / 3) * 2}px;
+        }
 
-    // app AVANT/AVANT et APRÈS/APRÈS app survolée
-    &:has(+ .app + .app:hover),
-    &:hover + .app + .app {
-        width: ${size + (sizeHover - size) / 3}px;
-        height: ${size + (sizeHover - size) / 3}px;
-        margin-top: -${(sizeHover - size)/3}px;
+        // app AVANT/AVANT et APRÈS/APRÈS app survolée
+        &:has(+ .app + .app:hover),
+        &:hover + .app + .app {
+            width: ${size + (sizeHover - size) / 3}px;
+            height: ${size + (sizeHover - size) / 3}px;
+            margin-top: -${(sizeHover - size) / 3}px;
+        }
     }
 `;
 
